@@ -1,0 +1,295 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background: #101c36;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    color: #36d7ff;
+    font-size: 28px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #36d7ff;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(120deg, #101c36, #176b87);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero h2 {
+    font-size: clamp(30px, 5vw, 46px);
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #36d7ff;
+    color: #101c36;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #101c36;
+    color: white;
+}
+
+/* Common Sections */
+section {
+    padding: 40px 7%;
+}
+
+.section-title {
+    color: #101c36;
+    font-size: 29px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.category-title {
+    color: #101c36;
+    font-size: 23px;
+    margin: 30px 0 15px;
+    scroll-margin-top: 20px;
+}
+
+/* Categories */
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.category {
+    background: white;
+    color: #101c36;
+    text-decoration: none;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 35px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #00000010;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.category h3 {
+    font-size: 19px;
+    margin-top: 8px;
+}
+
+.category:hover {
+    background: #dff7ff;
+    transform: translateY(-5px);
+}
+
+/* Product Cards */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.product-card {
+    background: white;
+    position: relative;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #00000012;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.product-card h3 {
+    color: #101c36;
+    margin-bottom: 8px;
+}
+
+.product-card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.discount {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #e63946;
+    color: white;
+    padding: 4px 9px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.price {
+    color: #087f5b;
+    font-size: 21px !important;
+    font-weight: bold;
+    margin-top: 12px !important;
+}
+
+.price del {
+    color: #888;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+/* Comparison Table */
+.table-container {
+    overflow-x: auto;
+    background: white;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    min-width: 550px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 14px;
+    text-align: center;
+}
+
+th {
+    background: #101c36;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #edf3f8;
+}
+
+/* Product Details */
+.details-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.details-container article {
+    background: white;
+    padding: 22px;
+    border-radius: 8px;
+    border-left: 4px solid #36d7ff;
+    scroll-margin-top: 20px;
+}
+
+.details-container h3 {
+    color: #101c36;
+    margin-bottom: 10px;
+}
+
+/* Offers */
+.offer {
+    background: #dff7ff;
+    text-align: center;
+    margin: 20px 7%;
+    border-radius: 10px;
+}
+
+.offer h2 {
+    color: #101c36;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background: #101c36;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+footer h2 {
+    color: #36d7ff;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    section {
+        padding: 30px 5%;
+    }
+
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .offer {
+        margin: 15px 5%;
+    }
+}
