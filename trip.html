@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore India | Tourism & Heritage</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#155e45;--orange:#e88a35;--cream:#fffaf1;--dark:#19352c}
+body{font-family:Arial,sans-serif;background:var(--cream);color:var(--dark);line-height:1.6}
+header{background:white;padding:15px 7%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.logo{font-size:23px;font-weight:bold;color:var(--green)}
+.logo span{color:var(--orange)}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:var(--dark);text-decoration:none;font-weight:600;font-size:14px}
+nav a:hover{color:var(--orange)}
+.hero{min-height:480px;padding:90px 8%;display:flex;align-items:center;color:white;background:linear-gradient(90deg,#102b23dc,#102b2350),url('https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-content{max-width:650px}
+.hero h1{font-size:clamp(38px,6vw,65px);line-height:1.12;margin:15px 0}
+.hero p{font-size:18px;margin-bottom:25px}
+.tag{color:#ffd49d;font-weight:bold;text-transform:uppercase;letter-spacing:2px}
+.btn{display:inline-block;background:var(--orange);color:white;padding:12px 23px;border:0;border-radius:7px;text-decoration:none;font-weight:bold;cursor:pointer}
+.btn:hover{background:#c76a20}
+section{padding:60px 7%}
+.section-head{text-align:center;margin-bottom:30px}
+.section-head h2{font-size:32px;color:var(--green)}
+.section-head p{color:#66756d;margin-top:6px}
+.search-area{background:#f0eadb;padding:24px 7%;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+input,select{padding:12px;border:1px solid #d4d7ce;border-radius:7px;background:white;font-size:15px;min-width:190px}
+input:focus,select:focus{outline:2px solid #8eb9a2}
+.filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.filter-btn{padding:9px 16px;border:1px solid #cbd5cc;background:white;border-radius:30px;cursor:pointer}
+.filter-btn.active,.filter-btn:hover{background:var(--green);color:white;border-color:var(--green)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:23px}
+.card{background:white;border-radius:13px;overflow:hidden;box-shadow:0 5px 20px #243d2710;transition:.2s}
+.card:hover{transform:translateY(-5px)}
+.card img{width:100%;height:210px;object-fit:cover;display:block}
+.card-content{padding:19px}
+.card-content h3{font-size:20px;margin:5px 0}
+.card-content p{color:#65716a;font-size:14px}
+.meta{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:8px;font-size:12px}
+.pill{background:#e6f1e9;color:var(--green);padding:4px 9px;border-radius:20px;font-weight:bold}
+.region{color:#8a6b47}
+.details{display:inline-block;margin-top:14px;color:var(--green);font-weight:bold;text-decoration:none}
+.details:hover{color:var(--orange)}
+.banner{background:var(--green);color:white;text-align:center;padding:50px 8%}
+.banner h2{font-size:30px;margin-bottom:10px}
+.banner p{max-width:680px;margin:0 auto 20px;color:#e1eee6}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.two-col img{width:100%;height:320px;object-fit:cover;border-radius:14px}
+.two-col h2{font-size:30px;color:var(--green);margin-bottom:14px}
+.tips-list{padding-left:20px}
+.tips-list li{margin:10px 0}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gallery img{width:100%;height:180px;object-fit:cover;border-radius:10px}
+.empty{text-align:center;grid-column:1/-1;padding:30px;color:#65716a}
+footer{background:#102d23;color:white;padding:35px 7%;text-align:center}
+footer p{color:#d5e1d9;font-size:14px;margin-top:7px}
+footer a{color:#ffd49d;text-decoration:none}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.two-col{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){header{justify-content:center}nav{justify-content:center;gap:12px}.grid{grid-template-columns:1fr}.hero{padding:65px 7%;min-height:400px}section{padding:42px 5%}.gallery img{height:140px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Explore<span>India.</span></div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#festivals">Festivals</a>
+    <a href="#cuisine">Cuisine</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#tips">Travel Tips</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="tag">Discover • Experience • Remember</div>
+    <h1>Discover India's Timeless Heritage</h1>
+    <p>Explore magnificent monuments, vibrant traditions, breathtaking landscapes, and unforgettable local flavours.</p>
+    <a href="#destinations" class="btn">Explore Destinations →</a>
+  </div>
+</section>
+
+<div class="search-area">
+  <input type="search" id="search" placeholder="Search destinations..." aria-label="Search destinations">
+  <select id="region" aria-label="Filter by region">
+    <option value="all">All Regions</option>
+    <option>North India</option>
+    <option>South India</option>
+    <option>East India</option>
+    <option>West India</option>
+  </select>
+  <select id="type" aria-label="Filter by attraction type">
+    <option value="all">All Attraction Types</option>
+    <option>Monument</option>
+    <option>Nature</option>
+    <option>Culture</option>
+    <option>Spiritual</option>
+  </select>
+</div>
+
+<section id="destinations">
+  <div class="section-head">
+    <h2>Explore Amazing Destinations</h2>
+    <p>Find your next adventure by region and attraction type.</p>
+  </div>
+  <div class="filters">
+    <button class="filter-btn active" data-region="all">All Places</button>
+    <button class="filter-btn" data-region="North India">North India</button>
+    <button class="filter-btn" data-region="South India">South India</button>
+    <button class="filter-btn" data-region="East India">East India</button>
+    <button class="filter-btn" data-region="West India">West India</button>
+  </div>
+  <div class="grid" id="destinationGrid"></div>
+</section>
+
+<section class="banner" id="festivals">
+  <h2>Celebrate India's Living Traditions</h2>
+  <p>From colourful harvest celebrations to classical dance, music, and grand processions, every region tells a unique cultural story.</p>
+  <a href="#gallery" class="btn">Explore the Culture</a>
+</section>
+
+<section id="cuisine">
+  <div class="two-col">
+    <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&q=80" alt="Indian cuisine served with traditional dishes" loading="lazy">
+    <div>
+      <div class="tag" style="color:#bb702a">A Taste of India</div>
+      <h2>Local Cuisine & Food Trails</h2>
+      <p>Discover the flavours that make every journey special. Indian cuisine changes with its climate, history, ingredients, and local traditions.</p>
+      <ul class="tips-list">
+        <li><b>North India:</b> Chole bhature, kebabs, and parathas.</li>
+        <li><b>South India:</b> Dosa, idli, and Andhra-style meals.</li>
+        <li><b>East India:</b> Bengali fish curry and traditional sweets.</li>
+        <li><b>West India:</b> Dhokla, pav bhaji, and Goan cuisine.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="section-head">
+    <h2>Travel Photo Gallery</h2>
+    <p>A glimpse of India's architectural wonders and natural beauty.</p>
+  </div>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=500&q=80" alt="Indian heritage architecture" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=500&q=80" alt="Historic Indian monument" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=500&q=80" alt="Colourful historic architecture" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80" alt="Beautiful travel landscape" loading="lazy">
+  </div>
+</section>
+
+<section id="tips">
+  <div class="two-col">
+    <div>
+      <h2>Travel Smart, Travel Responsibly</h2>
+      <p>Make your trip memorable while respecting local people, traditions, and historic places.</p>
+      <ul class="tips-list">
+        <li>Check weather, local transport, and opening hours before travelling.</li>
+        <li>Wear appropriate clothing when visiting religious places.</li>
+        <li>Respect monument rules and avoid littering.</li>
+        <li>Try local food and support local artisans and businesses.</li>
+        <li>Keep water, identification, and emergency contacts handy.</li>
+        <li>Book accommodation and transport through trusted providers.</li>
+      </ul>
+    </div>
+    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" alt="Mountain landscape for responsible travel" loading="lazy">
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="logo" style="color:white">Explore<span>India.</span></div>
+  <p>Discover India's history, celebrate its culture, and protect its heritage.</p>
+  <p>© 2026 Explore India | Tourism & Heritage Information Website</p>
+  <p><a href="#home">Back to top ↑</a></p>
+</footer>
+
+<script>
+const destinations = [
+ {name:"Taj Mahal",region:"North India",type:"Monument",city:"Agra, Uttar Pradesh",desc:"A world-famous marble mausoleum celebrated for its Mughal architecture.",img:"photo-1564507592333-c60657eea523"},
+ {name:"Jaipur",region:"North India",type:"Culture",city:"Rajasthan",desc:"Explore royal palaces, colourful bazaars, forts, and Rajasthani traditions.",img:"photo-1477587458883-47145ed94245"},
+ {name:"Varanasi",region:"North India",type:"Spiritual",city:"Uttar Pradesh",desc:"Experience ancient riverside ghats, temples, and living spiritual traditions.",img:"photo-1561361513-2d000a50f0dc"},
+ {name:"Hampi",region:"South India",type:"Monument",city:"Karnataka",desc:"Discover the ruins, stone temples, and architectural legacy of Vijayanagara.",img:"photo-1600100397608-f010e2d5e7d3"},
+ {name:"Kerala Backwaters",region:"South India",type:"Nature",city:"Kerala",desc:"Enjoy peaceful waterways, lush greenery, village life, and traditional houseboats.",img:"photo-1602216056096-3b40cc0c9944"},
+ {name:"Charminar",region:"South India",type:"Monument",city:"Hyderabad, Telangana",desc:"Visit Hyderabad's iconic monument and explore the nearby historic markets.",img:"photo-1572445271230-a78b5944a659"},
+ {name:"Konark Sun Temple",region:"East India",type:"Monument",city:"Odisha",desc:"Admire a remarkable stone temple designed in the form of a monumental chariot.",img:"photo-1514222134-b57cbb8ce073"},
+ {name:"Darjeeling",region:"East India",type:"Nature",city:"West Bengal",desc:"Enjoy tea gardens, Himalayan scenery, and a heritage mountain railway.",img:"photo-1544735716-392fe2489ffa"},
+ {name:"Kolkata",region:"East India",type:"Culture",city:"West Bengal",desc:"Discover colonial-era landmarks, literature, art, and celebrated Durga Puja festivities.",img:"photo-1558431382-27e303142255"},
+ {name:"Ajanta Caves",region:"West India",type:"Monument",city:"Maharashtra",desc:"Explore ancient Buddhist cave monuments and extraordinary historic paintings.",img:"photo-1567157577867-05ccb1388e66"},
+ {name:"Rann of Kutch",region:"West India",type:"Nature",city:"Gujarat",desc:"Experience the vast white salt desert and regional crafts and folk traditions.",img:"photo-1470252649378-9c29740c9fa8"},
+ {name:"Goa",region:"West India",type:"Culture",city:"Goa",desc:"Discover coastal scenery, Portuguese-influenced heritage, and distinctive local cuisine.",img:"photo-1512343879784-a960bf40e7f2"}
+];
+
+const grid=document.getElementById("destinationGrid");
+const search=document.getElementById("search");
+const region=document.getElementById("region");
+const type=document.getElementById("type");
+let selectedRegion="all";
+
+function render(){
+ const q=search.value.trim().toLowerCase();
+ const results=destinations.filter(d=>
+   (selectedRegion==="all"||d.region===selectedRegion)&&
+   (region.value==="all"||d.region===region.value)&&
+   (type.value==="all"||d.type===type.value)&&
+   (d.name+" "+d.city+" "+d.desc+" "+d.region+" "+d.type).toLowerCase().includes(q)
+ );
+ grid.innerHTML=results.length?results.map(d=>`
+  <article class="card">
+   <img src="https://images.unsplash.com/${d.img}?auto=format&fit=crop&w=800&q=80"
+        alt="${d.name}" loading="lazy">
+   <div class="card-content">
+    <div class="meta"><span class="pill">${d.type}</span><span class="region">${d.region}</span></div>
+    <h3>${d.name}</h3>
+    <p><b>${d.city}</b></p>
+    <p>${d.desc}</p>
+    <a class="details" href="https://www.google.com/search?q=${encodeURIComponent(d.name+" tourism official travel information")}" target="_blank" rel="noopener noreferrer">Discover more ↗</a>
+   </div>
+  </article>`).join(""):'<p class="empty">No destinations found. Try changing your search or filters.</p>';
+
+ document.querySelectorAll(".filter-btn").forEach(b=>
+   b.classList.toggle("active",b.dataset.region===selectedRegion));
+}
+search.addEventListener("input",render);
+region.addEventListener("change",()=>{selectedRegion="all";render()});
+type.addEventListener("change",render);
+document.querySelectorAll(".filter-btn").forEach(b=>{
+ b.addEventListener("click",()=>{
+  selectedRegion=b.dataset.region;
+  region.value="all";
+  render();
+ });
+});
+render();
+</script>
+</body>
+</html>
+  
