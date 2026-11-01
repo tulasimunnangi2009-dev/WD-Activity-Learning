@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodieHub | Online Food Ordering</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <a href="#home" class="logo">Foodie<span>Hub.</span></a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#menu">Our Menu</a>
+      <a href="#offers">Offers</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+
+    <a href="#menu" class="nav-button">Order Now</a>
+  </header>
+
+  <main>
+    <!-- Hero Banner -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">FRESH • TASTY • DELIVERED</p>
+        <h1>Your favourite food,<br>
+          <span>just a click away!</span>
+        </h1>
+        <p>
+          Discover mouth-watering dishes made with fresh ingredients.
+          Great food, great prices, delivered to your doorstep.
+        </p>
+        <a href="#menu" class="button">Explore Menu →</a>
+        <div class="delivery-info">
+          <span>⭐ 4.8 Rating</span>
+          <span>🛵 30–40 Min</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Restaurant Information -->
+    <section class="restaurant-info">
+      <div>
+        <h3>FoodieHub Restaurant</h3>
+        <p>📍 Vijayawada, Andhra Pradesh</p>
+      </div>
+      <div>
+        <strong>4.8 ★</strong>
+        <p>Customer Rating</p>
+      </div>
+      <div>
+        <strong>30–40 min</strong>
+        <p>Estimated Delivery</p>
+      </div>
+      <div>
+        <strong>₹199</strong>
+        <p>Sample Average Order</p>
+      </div>
+    </section>
+
+    <!-- Food Categories -->
+    <section class="section" id="categories">
+      <div class="section-title">
+        <p class="eyebrow">WHAT ARE YOU CRAVING?</p>
+        <h2>Explore Categories</h2>
+        <p>Something delicious for every mood.</p>
+      </div>
+
+      <div class="category-grid">
+        <a href="#menu" class="category-card">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="Cheese pizza">
+          <h3>Pizza</h3>
+        </a>
+
+        <a href="#menu" class="category-card">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80" alt="Juicy burger">
+          <h3>Burgers</h3>
+        </a>
+
+        <a href="#menu" class="category-card">
+          <img src="https://images.unsplash.com/photo-1563379091339-03246963d51a?auto=format&fit=crop&w=500&q=80" alt="Chicken biryani">
+          <h3>Biryani</h3>
+        </a>
+
+        <a href="#menu" class="category-card">
+          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=500&q=80" alt="Sweet dessert">
+          <h3>Desserts</h3>
+        </a>
+      </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="offer-section" id="offers">
+      <div class="offer-content">
+        <p class="eyebrow">LIMITED-TIME DEAL</p>
+        <h2>Good Food.<br>Great Offers.</h2>
+        <p>Get 20% off your sample order above ₹499.</p>
+        <a href="#menu" class="button light-button">Explore Deals →</a>
+        <small>Demo offer — subject to restaurant terms.</small>
+      </div>
+      <div class="offer-emoji" aria-hidden="true">🍕🍔🍟</div>
+    </section>
+
+    <!-- Food Menu -->
+    <section class="section" id="menu">
+      <div class="section-title">
+        <p class="eyebrow">MADE WITH LOVE</p>
+        <h2>Our Popular Menu</h2>
+        <p>Customer favourites prepared fresh for you.</p>
+      </div>
+
+      <div class="food-grid">
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=700&q=80" alt="Margherita pizza">
+          <div class="food-details">
+            <span class="food-tag">BESTSELLER</span>
+            <h3>Margherita Pizza</h3>
+            <p>Classic cheese, tomato sauce and fresh herbs.</p>
+            <div class="food-bottom">
+              <strong>₹249</strong>
+              <a href="#contact" class="order-button">Order +</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80" alt="Classic chicken burger">
+          <div class="food-details">
+            <span class="food-tag">POPULAR</span>
+            <h3>Classic Burger</h3>
+            <p>Juicy patty, fresh lettuce and signature sauce.</p>
+            <div class="food-bottom">
+              <strong>₹159</strong>
+              <a href="#contact" class="order-button">Order +</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1563379091339-03246963d51a?auto=format&fit=crop&w=700&q=80" alt="Flavourful biryani">
+          <div class="food-details">
+            <span class="food-tag">CHEF'S PICK</span>
+            <h3>Chicken Biryani</h3>
+            <p>Fragrant rice with aromatic spices and herbs.</p>
+            <div class="food-bottom">
+              <strong>₹229</strong>
+              <a href="#contact" class="order-button">Order +</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=80" alt="Ice cream dessert">
+          <div class="food-details">
+            <span class="food-tag">SWEET TREAT</span>
+            <h3>Ice Cream Sundae</h3>
+            <p>Creamy ice cream with chocolate topping.</p>
+            <div class="food-bottom">
+              <strong>₹99</strong>
+              <a href="#contact" class="order-button">Order +</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=80" alt="Vegetable pizza">
+          <div class="food-details">
+            <span class="food-tag">VEGETARIAN</span>
+            <h3>Farmhouse Pizza</h3>
+            <p>Fresh vegetables, mozzarella and Italian herbs.</p>
+            <div class="food-bottom">
+              <strong>₹279</strong>
+              <a href="#contact" class="order-button">Order +</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=700&q=80" alt="Cheese burger and fries">
+          <div class="food-details">
+            <span class="food-tag">MUST TRY</span>
+            <h3>Cheese Burger</h3>
+            <p>Melty cheese, a toasted bun and crispy fries.</p>
+            <div class="food-bottom">
+              <strong>₹189</strong>
+              <a href="#contact" class="order-button">Order +</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="section reviews-section" id="reviews">
+      <div class="section-title">
+        <p class="eyebrow">CUSTOMER LOVE</p>
+        <h2>What People Say</h2>
+        <p>Sample testimonials for the website design.</p>
+      </div>
+
+      <div class="review-grid">
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"The food was delicious and the presentation was amazing!"</p>
+          <h4>Priya K.</h4>
+          <span>Student Customer</span>
+        </article>
+
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Loved the menu variety and the easy ordering experience."</p>
+          <h4>Rahul M.</h4>
+          <span>Regular Customer</span>
+        </article>
+
+        <article class="review-card">
+          <div class="stars">★★★★☆</div>
+          <p>"Great flavours and a lovely selection of food."</p>
+          <h4>Sneha R.</h4>
+          <span>Student Customer</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact and Order Form -->
+    <section class="section contact-section" id="contact">
+      <div class="section-title">
+        <p class="eyebrow">READY TO ORDER?</p>
+        <h2>Place Your Order</h2>
+        <p>Fill in the details to prepare your sample order request.</p>
+      </div>
+
+      <form class="order-form" action="mailto:orders@example.com"
+            method="post" enctype="text/plain">
+        <label for="customer-name">Your Name</label>
+        <input type="text" id="customer-name" name="Name"
+               placeholder="Enter your name" required>
+
+        <label for="customer-email">Email Address</label>
+        <input type="email" id="customer-email" name="Email"
+               placeholder="Enter your email" required>
+
+        <label for="food-choice">Choose Your Food</label>
+        <select id="food-choice" name="Food" required>
+          <option value="">Select a dish</option>
+          <option>Margherita Pizza - ₹249</option>
+          <option>Classic Burger - ₹159</option>
+          <option>Chicken Biryani - ₹229</option>
+          <option>Ice Cream Sundae - ₹99</option>
+          <option>Farmhouse Pizza - ₹279</option>
+          <option>Cheese Burger - ₹189</option>
+        </select>
+
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="Quantity"
+               min="1" max="20" value="1" required>
+
+        <label for="address">Delivery Address</label>
+        <textarea id="address" name="Address"
+                  placeholder="Enter your delivery address"
+                  rows="3" required></textarea>
+
+        <button type="submit" class="button submit-button">
+          Send Order Request →
+        </button>
+        <p class="form-note">
+          Demo form: submission opens a compatible email application.
+          No online payment or order tracking is provided.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="#home" class="logo">Foodie<span>Hub.</span></a>
+    <p>Good food, good mood. 🍴</p>
+    <p>© 2026 FoodieHub. Student web design project.</p>
+  </footer>
+
+</body>
+</html>
